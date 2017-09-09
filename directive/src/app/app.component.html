@@ -1,0 +1,41 @@
+<div class="container">
+   <div class="row">
+      <div class="col-md-12">
+         <h1>
+           {{title}}
+         </h1>
+      </div>
+<div>
+  <!-- products details-->
+  <table class="table table-bordered table-hover">
+  <thead>
+    <tr> 
+      <th>Name</th>
+      <th>Price</th>
+      <th>Rating</th>
+      <th>ViewFull</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let p of products">
+    <td>{{p.title}}</td>
+    <td>{{p.price}}</td>
+    <td>{{p.rating}}</td>
+    <td>
+      <button (click)="onViewClick(p)" class="btn btn-sm btn-info" >ViewProduct</button>
+    </td>
+  
+  </tr>
+  </tbody>
+</table>
+<!--selected products-->
+<div *ngIf="selectedProduct">
+  <h4>Selected Product</h4>
+  <p>Title: {{selectedProduct.title}}</p>
+  <p>Price: {{selectedProduct.price}}</p>
+  <p>Rating: {{selectedProduct.rating}}</p>
+</div>
+
+ </div>
+</div>
+</div>

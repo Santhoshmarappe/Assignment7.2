@@ -1,0 +1,10 @@
+.container{
+    width:100%;
+    max-width: 600px;
+    padding:20px 50px 50px 50px;
+    background: #fff; 
+}
+.container h1{
+    color: #f000ff;;
+    text-align: center;
+}
